@@ -8,6 +8,7 @@ import { RouterOutlet } from "@angular/router";
 import { AppRoutingModule } from "./app.routes";
 import { MasterComponent } from "./components/master/master.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     declarations: [
@@ -18,13 +19,13 @@ import { SidebarComponent } from "./components/sidebar/sidebar.component";
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         FormsModule,
         ReactiveFormsModule,
         HttpClientModule,
         RouterOutlet,
         AppRoutingModule
     ],
-    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

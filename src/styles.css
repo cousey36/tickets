@@ -266,6 +266,85 @@ tr:hover {
     margin-top: 3rem;
 }
 
+
+.modal-contenido {
+    background: #FFFFFF;
+    width: 95%;
+    position: relative;
+    margin: 30px auto;
+    border-radius: 3px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    animation: 1 0.2s zoomOutModal ease-in;
+    -moz-animation: 1 0.2s zoomOutModal ease-in;
+    -webkit-animation: 1 0.2s zoomOutModal ease-in;
+}
+
+.modal-cuerpo {
+    box-sizing: border-box;
+    padding: 20px 30px;
+}
+
+.modal-encabezado {
+    padding: 20px 30px;
+    box-sizing: border-box;
+    border-bottom: 2px solid #e7ebee;
+    position: relative;
+}
+
+.modal-encabezado>h4 {
+    margin: 0 !important;
+    color: #344644;
+    font-weight: normal;
+}
+
+.modal-encabezado>button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    border: none;
+    cursor: pointer;
+    background: none;
+    color: #707070;
+}
+
+.modal-loading {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(255, 255, 255, 0.4);
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+}
+
+.modal-pie {
+    box-sizing: border-box;
+    padding: 20px 30px;
+    text-align: right;
+    border-top: 2px solid #e7ebee;
+}
+
+.modal-visible {
+    transform: scale(1);
+    animation-delay: 1s;
+    animation: 1 0.2s zoomInModal ease-in;
+    -moz-animation: 1 0.2s zoomInModal ease-in;
+    -webkit-animation: 1 0.2s zoomInModal ease-in;
+}
+
 .pagination {
     display: inline-block;
 }
@@ -360,4 +439,76 @@ tr:hover {
 
 .w100 {
     width: 100%;
+}
+
+@keyframes zoomInModal {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@-moz-keyframes zoomInModal {
+    from {
+        opacity: 0;
+        -moz-transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        -moz-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes zoomInModal {
+    from {
+        opacity: 0;
+        -webkit-transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+}
+
+@keyframes zoomOutModal {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+}
+
+@-moz-keyframes zoomOutModal {
+    from {
+        opacity: 1;
+        -moz-transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        -moz-transform: scale(0.9);
+    }
+}
+
+@-webkit-keyframes zoomOutModal {
+    from {
+        opacity: 1;
+        -webkit-transform: scale(1);
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: scale(0.9);
+    }
 }

@@ -1,0 +1,27 @@
+<div class="modal-overlay" [@inOut]="visible ? 'in' : 'out'">
+    <div class="modal-contenido" [ngClass]="{'modal-visible': visible}" [ngStyle]="{'max-width.px': anchura}">
+        <div class="modal-encabezado">
+            @if (encabezadoC != null) {
+            <ng-container *ngTemplateOutlet="encabezadoC"></ng-container>
+            }
+        </div>
+        <div class="modal-cuerpo">
+            @if (cuerpoC != null) {
+            <ng-container *ngTemplateOutlet="cuerpoC"></ng-container>
+            }
+        </div>
+        <div class="modal-pie">
+            @if (pieC != null) {
+            <ng-container *ngTemplateOutlet="pieC"></ng-container>
+            }
+        </div>
+        <div class="modal-loading animated fadeIn" *ngIf="procesando">
+            <div class="simple-loader">
+                <div></div>
+                <div style="animation-delay: 0.5s;"></div>
+                <div style="animation-delay: 1s;"></div>
+                <div style="animation-delay: 1.5s;"></div>
+            </div>
+        </div>
+    </div>
+</div>

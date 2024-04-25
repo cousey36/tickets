@@ -5,5 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './contacts.component.html'
 })
 export class ContactsComponent {
+  modalCrearVisible: boolean = false;
 
+  cerrarContacto(){
+    this.modalCrearVisible = false;
+  }
+
+  crear() {
+    this.modalCrearVisible = true;
+  }
 }
