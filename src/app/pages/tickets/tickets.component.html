@@ -11,11 +11,12 @@
         <li>
             <label class="form-label">Estatus</label>
             <select class="form-control">
-                <option>Todos</option>
+                <option value="0">Todos</option>
+                <option *ngFor="let estatus of estatusTicket" [value]="estatus.Id">{{estatus.Descripcion}}</option>
             </select>
         </li>
         <li>
-            <button>Crear</button>
+            <button type="button" (click)="ShowTicket()">Crear</button>
         </li>
     </ul>
 </div>

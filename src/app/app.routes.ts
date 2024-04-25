@@ -1,4 +1,4 @@
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NoPreloading, PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { UsersComponent } from './pages/users/users.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { RolesComponent } from './pages/roles/roles.component';
@@ -23,11 +23,11 @@ export const routes: Routes = [
             },
             {
                 path: 'contacts',
-                loadChildren: ()=> import('./pages/contacts/contacts.module').then(m => m.ContactsModule)
+                loadChildren: () => import('./pages/contacts/contacts.module').then(m => m.ContactsModule)
             },
             {
                 path: 'accounts',
-                component: AccountsComponent
+                loadChildren: () => import('./pages/accounts/accounts.module').then(m => m.AccountsModule)
             },
             {
                 path: 'products',
@@ -43,7 +43,7 @@ export const routes: Routes = [
             },
             {
                 path: 'tickets',
-                component: TicketsComponent
+                loadChildren: ()=> import('./pages/tickets/tickets.module').then(m => m.TicketsModule)
             }
         ]
     },
@@ -53,7 +53,7 @@ export const routes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })],
+    imports: [RouterModule.forRoot(routes, { preloadingStrategy: NoPreloading })],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

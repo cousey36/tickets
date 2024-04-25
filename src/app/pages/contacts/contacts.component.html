@@ -55,9 +55,61 @@
         <h4>Crear Contacto</h4>
     </ng-template>
     <ng-template #cuerpo>
-
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Cuenta</label>
+                        <select class="form-control"></select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Nombre</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Apellido Paterno</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Apellido Materno</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Correo</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Puesto</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Teléfono</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+            </div>
+        </form>
     </ng-template>
     <ng-template #pie>
-       <button type="button" (click)="cerrarContacto()">Cerrar</button>
+        <button type="button" (click)="cerrarContacto()">Cerrar</button>
+        <button class="primary ml-3" type="button" (click)="cerrarContacto()">Guardar</button>
     </ng-template>
 </app-modal>

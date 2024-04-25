@@ -9,7 +9,7 @@
             </div>
         </li>
         <li>
-            <button>Crear</button>
+            <button (click)="ShowAccount()">Crear</button>
         </li>
     </ul>
 </div>
@@ -25,7 +25,7 @@
                     <th>Colonia</th>
                     <th>Código postal</th>
                     <th>País</th>
-                    <th [width]="130"></th>
+                    <th [width]="100"></th>
                 </tr>
             </thead>
             <tbody>
@@ -37,15 +37,12 @@
                     <td>Colonia</td>
                     <td>75693</td>
                     <td>País</td>
-                    <td [width]="130">
+                    <td [width]="100">
                         <button class="icon blue">
                             <i class='bx bx-edit-alt'></i>
                         </button>
-                        <button class="icon indigo ml-1">
-                            <i class='bx bx-conversation'></i>
-                        </button>
-                        <button class="icon green ml-1">
-                            <i class='bx bxs-contact'></i>
+                        <button class="icon red ml-2">
+                            <i class='bx bx-trash-alt'></i>
                         </button>
                     </td>
                 </tr>
@@ -53,3 +50,90 @@
         </table>
     </div>
 </div>
+<app-modal [visible]="modalAccountVisible">
+    <ng-template #encabezado>
+        <h4>{{modalAccountTitle}}</h4>
+    </ng-template>
+    <ng-template #cuerpo>
+        <form>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Nombre de empresa</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Teléfono</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Calle</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Colonia</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">No Exterior</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">No Interior</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Código</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Municipio</label>
+                        <input class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">País</label>
+                        <select class="form-control">
+                            <option *ngFor="let pais of paises" [value]="pais.Id">{{pais.Nombre}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Estado</label>
+                        <select class="form-control">
+                            <option *ngFor="let estado of estados" [value]="estado.Id">{{estado.Nombre}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </ng-template>
+    <ng-template #pie>
+        <button type="button" (click)="HideAccount()">Cerrar</button>
+        <button class="primary ml-3" type="button" (click)="SaveAccount()">Guardar</button>
+    </ng-template>
+</app-modal>

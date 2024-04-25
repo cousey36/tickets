@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8e5ee785-3d8e-4957-8d78-873d089c485f/resourceGroups/CyberPower/providers/Microsoft.Web/sites/cyberpowertickets",
+    "appService.deploySubpath": "dist\\tickets\\browser"
+}
