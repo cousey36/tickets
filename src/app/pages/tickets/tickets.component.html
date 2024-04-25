@@ -1,0 +1,54 @@
+<div class="section-header">
+    <h2>Tickets</h2>
+    <ul>
+        <li>
+            <label class="form-label">Buscar</label>
+            <div class="form-control-icon">
+                <input type="text" />
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+        </li>
+        <li>
+            <label class="form-label">Estatus</label>
+            <select class="form-control">
+                <option>Todos</option>
+            </select>
+        </li>
+        <li>
+            <button>Crear</button>
+        </li>
+    </ul>
+</div>
+<div class="card mt-3">
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Folio</th>
+                    <th>Nombre</th>
+                    <th>Empresa</th>
+                    <th>Estatus</th>
+                    <th>Fecha</th>
+                    <th [width]="80"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>00000</td>
+                    <td>Nombre</td>
+                    <td>Empresa</td>
+                    <td>Solicitud Nueva</td>
+                    <td>Fecha</td>
+                    <td [width]="80">
+                        <button class="icon blue">
+                            <i class='bx bx-edit-alt'></i>
+                        </button>
+                        <button class="icon red ml-1">
+                            <i class='bx bx-trash-alt'></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

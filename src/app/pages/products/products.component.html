@@ -1,0 +1,58 @@
+<div class="section-header">
+    <h2>Productos</h2>
+    <ul>
+        <li>
+            <label class="form-label">Buscar</label>
+            <div class="form-control-icon">
+                <input type="text" />
+                <i class='bx bx-search-alt-2'></i>
+            </div>
+        </li>
+        <li>
+            <label class="form-label">Módelo</label>
+            <select class="form-control">
+                <option>Todas</option>
+            </select>
+        </li>
+        <li>
+            <label class="form-label">Familia</label>
+            <select class="form-control">
+                <option>Todas</option>
+            </select>
+        </li>
+        <li>
+            <button>Crear</button>
+        </li>
+    </ul>
+</div>
+<div class="card mt-3">
+    <div class="table-responsive">
+        <table>
+            <thead>
+                <tr>
+                    <th>Familia</th>
+                    <th>Modelo</th>
+                    <th>No. Serie</th>
+                    <th>Tipo</th>
+                    <th [width]="80"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>3PHASE (ACC)</td>
+                    <td>Modelo</td>
+                    <td>1234567897</td>
+                    <td>Mayoreo</td>
+                    <td [width]="80">
+                        <button class="icon blue">
+                            <i class='bx bx-edit-alt'></i>
+                        </button>
+                        <button class="icon red ml-1">
+                            <i class='bx bx-trash-alt'></i>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

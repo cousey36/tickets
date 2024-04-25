@@ -1,0 +1,51 @@
+<nav class="sidebar">
+    <div class="brand">
+        <img src="/assets/logo_red.svg" />
+    </div>
+    <div class="body">
+        <ul>
+            <li>
+                <a [routerLink]="['/dashboard']" routerLinkActive="router-link-active">
+                    <i class='bx bxs-dashboard'></i> Dashboard
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/accounts']" routerLinkActive="router-link-active">
+                    <i class='bx bxs-user-account'></i> Cuentas
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/contacts']" routerLinkActive="router-link-active">
+                    <i class='bx bxs-contact'></i> Contactos
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/products']" routerLinkActive="router-link-active">
+                    <i class='bx bxs-package'></i> Products
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/users']" routerLinkActive="router-link-active">
+                    <i class='bx bxs-user'></i> Usuarios
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/roles']" routerLinkActive="router-link-active">
+                    <i class='bx bxs-color'></i> Roles
+                </a>
+            </li>
+            <li>
+                <a [routerLink]="['/tickets']" routerLinkActive="router-link-active">
+                    <i class='bx bx-conversation'></i> Tickets
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="#" class="txt-red">
+                    <b><i class='bx bx-power-off' style="font-size: 1.2em;"></i> Cerrar sesión</b>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
